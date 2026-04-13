@@ -1,0 +1,20 @@
+{
+  "name": "grammar-fix-ai-mcp",
+  "description": "MEOK AI Labs \u2014 grammar-fix-ai-mcp \u2014 Fix grammar and style in text.",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/grammar-fix-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "run"
+  ],
+  "categories": [
+    "Writing",
+    "Language"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}

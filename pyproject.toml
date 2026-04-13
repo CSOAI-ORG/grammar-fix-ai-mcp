@@ -4,14 +4,26 @@ build-backend = "hatchling.build"
 
 [project]
 name = "grammar-fix-ai-mcp"
-version = "0.1.0"
-description = "Fix grammar and style in text."
+version = "1.0.0"
+description = "MEOK AI Labs — grammar-fix-ai-mcp — Fix grammar and style in text."
 authors = [{name="MEOK AI Labs", email="nicholas@meok.ai"}]
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
-dependencies = ["mcp>=1.0.0"]
+keywords = ["mcp", "mcp-server", "model-context-protocol", "claude", "ai-tools", "meok-ai-labs", "grammar-check", "proofreading", "spell-check", "writing-correction", "nlp"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "mcp>=1.0.0",
+]
 
 [project.urls]
 Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/grammar-fix-ai-mcp"
+Documentation = "https://meok.ai/docs/grammar-fix-ai-mcp"
+"Bug Tracker" = "https://github.com/CSOAI-ORG/grammar-fix-ai-mcp/issues"

@@ -1,0 +1,10 @@
+name: grammar-fix-ai-mcp
+description: "MEOK AI Labs — grammar-fix-ai-mcp — Fix grammar and style in text."
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/grammar-fix-ai-mcp
+license: MIT
+categories: [Writing, Language]
+tags: [grammar-check, proofreading, spell-check, writing-correction, nlp]
+runtime: python
+entrypoint: server.py
