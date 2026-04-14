@@ -1,20 +1,67 @@
 {
   "name": "grammar-fix-ai-mcp",
-  "description": "MEOK AI Labs \u2014 grammar-fix-ai-mcp \u2014 Fix grammar and style in text.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/grammar-fix-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "grammar-fix-ai-mcp \u2014 Fix grammar and style in text.",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "Writing",
-    "Language"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "check_grammar",
+      "description": "Check for grammar errors and suggest corrections.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "fix_spelling",
+      "description": "Fix common spelling mistakes.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "improve_clarity",
+      "description": "Suggest improvements for clarity and readability.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "check_passive_voice",
+      "description": "Detect passive voice and suggest active alternatives.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    }
+  ]
 }

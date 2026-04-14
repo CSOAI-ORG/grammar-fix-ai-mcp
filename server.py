@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """Grammar correction, spelling fixes, and writing improvement. — MEOK AI Labs."""
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import json, os, re, hashlib, math
 from datetime import datetime, timezone
 from typing import Optional
@@ -18,8 +23,12 @@ mcp = FastMCP("grammar-fix-ai", instructions="MEOK AI Labs — Grammar correctio
 
 
 @mcp.tool()
-def check_grammar(text: str) -> str:
+def check_grammar(text: str, api_key: str = "") -> str:
     """Check for grammar errors and suggest corrections."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "check_grammar", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
@@ -30,11 +39,15 @@ def check_grammar(text: str) -> str:
     result["fixes"] = fixes
     result["corrected"] = text
     for f in fixes: result["corrected"] = result["corrected"].replace(f["wrong"], f["correct"])
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def fix_spelling(text: str) -> str:
+def fix_spelling(text: str, api_key: str = "") -> str:
     """Fix common spelling mistakes."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "fix_spelling", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
@@ -45,25 +58,33 @@ def fix_spelling(text: str) -> str:
     result["fixes"] = fixes
     result["corrected"] = text
     for f in fixes: result["corrected"] = result["corrected"].replace(f["wrong"], f["correct"])
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def improve_clarity(text: str) -> str:
+def improve_clarity(text: str, api_key: str = "") -> str:
     """Suggest improvements for clarity and readability."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "improve_clarity", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 @mcp.tool()
-def check_passive_voice(text: str) -> str:
+def check_passive_voice(text: str, api_key: str = "") -> str:
     """Detect passive voice and suggest active alternatives."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if err := _rl(): return err
     # Real implementation
     result = {"tool": "check_passive_voice", "input_length": len(str(locals())), "timestamp": datetime.now(timezone.utc).isoformat()}
     result["status"] = "processed"
-    return json.dumps(result, indent=2)
+    return result
 
 
 if __name__ == "__main__":

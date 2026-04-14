@@ -1,10 +1,28 @@
 name: grammar-fix-ai-mcp
-description: "MEOK AI Labs — grammar-fix-ai-mcp — Fix grammar and style in text."
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/grammar-fix-ai-mcp
-license: MIT
-categories: [Writing, Language]
-tags: [grammar-check, proofreading, spell-check, writing-correction, nlp]
-runtime: python
-entrypoint: server.py
+description: "grammar-fix-ai-mcp \u2014 Fix grammar and style in text."
+version: 1.0.0
+tools:
+- name: check_grammar
+  description: Check for grammar errors and suggest corrections.
+  parameters:
+  - name: text
+    type: string
+    required: true
+- name: fix_spelling
+  description: Fix common spelling mistakes.
+  parameters:
+  - name: text
+    type: string
+    required: true
+- name: improve_clarity
+  description: Suggest improvements for clarity and readability.
+  parameters:
+  - name: text
+    type: string
+    required: true
+- name: check_passive_voice
+  description: Detect passive voice and suggest active alternatives.
+  parameters:
+  - name: text
+    type: string
+    required: true
