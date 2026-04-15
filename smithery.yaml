@@ -1,6 +1,6 @@
 name: grammar-fix-ai-mcp
-description: "MEOK AI Labs \u2014 Grammar correction, spelling fixes, and writing\
-  \ improvement."
+description: Grammar Fix Ai automation via MCP. Includes check grammar, fix spelling,
+  improve clarity. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: check_grammar
