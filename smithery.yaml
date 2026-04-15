@@ -1,5 +1,6 @@
 name: grammar-fix-ai-mcp
-description: "grammar-fix-ai-mcp \u2014 Fix grammar and style in text."
+description: "MEOK AI Labs \u2014 Grammar correction, spelling fixes, and writing\
+  \ improvement."
 version: 1.0.0
 tools:
 - name: check_grammar
