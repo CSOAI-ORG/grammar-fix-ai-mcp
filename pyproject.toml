@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "grammar-fix-ai-mcp"
-version = "1.0.0"
+version = "1.0.2"
 description = "Grammar Fix Ai automation via MCP. Includes check grammar, fix spelling, improve clarity. By MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
