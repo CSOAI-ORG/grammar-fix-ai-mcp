@@ -1,3 +1,5 @@
+[![grammar-fix-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/grammar-fix-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/grammar-fix-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/grammar-fix-ai-mcp)](https://github.com/CSOAI-ORG/grammar-fix-ai-mcp/stargazers)
