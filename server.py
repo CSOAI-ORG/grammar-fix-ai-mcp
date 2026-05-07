@@ -81,7 +81,23 @@ READABILITY_CONNECTORS = ["however", "therefore", "furthermore", "moreover", "ad
 
 @mcp.tool()
 def fix_grammar(text: str, dialect: str = "en-US", api_key: str = "") -> str:
-    """Check and fix grammar errors including homophones, punctuation, capitalization, and common mistakes."""
+    """Check and fix grammar errors including homophones, punctuation, capitalization, and common mistakes.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -121,7 +137,23 @@ def fix_grammar(text: str, dialect: str = "en-US", api_key: str = "") -> str:
 
 @mcp.tool()
 def check_spelling(text: str, api_key: str = "") -> str:
-    """Check spelling against a comprehensive dictionary of common misspellings with suggestions."""
+    """Check spelling against a comprehensive dictionary of common misspellings with suggestions.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -157,7 +189,23 @@ def check_spelling(text: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def improve_readability(text: str, target_level: str = "general", api_key: str = "") -> str:
-    """Analyze and suggest improvements for readability using Flesch-Kincaid and other metrics."""
+    """Analyze and suggest improvements for readability using Flesch-Kincaid and other metrics.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -243,7 +291,23 @@ def _count_syllables(word: str) -> int:
 
 @mcp.tool()
 def analyze_tone(text: str, api_key: str = "") -> str:
-    """Analyze writing tone and style: formal/informal, positive/negative, assertive/tentative."""
+    """Analyze writing tone and style: formal/informal, positive/negative, assertive/tentative.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
