@@ -1,45 +1,58 @@
-[![grammar-fix-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/grammar-fix-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/grammar-fix-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/grammar-fix-ai-mcp)](https://pypi.org/project/grammar-fix-ai-mcp/)
-
-[![grammar-fix-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/grammar-fix-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/grammar-fix-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/grammar-fix-ai-mcp)](https://github.com/CSOAI-ORG/grammar-fix-ai-mcp/stargazers)
+# Grammar Fix Ai MCP
 
-# ugrammarU fixU aiU mcp
+**MCP server for grammar fix ai mcp operations**
 
-**Grammar correction, spelling fixes, and writing improvement. — MEOK AI Labs.**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/grammar-fix-ai-mcp)](https://www.npmjs.com/package/@meok-ai/grammar-fix-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-grammar-fix-ai-mcp)](https://pypi.org/project/meok-grammar-fix-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/grammar-fix-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Grammar Fix Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `fix_grammar` | Check and fix grammar errors including homophones, punctuation, capitalization,  |
+| `check_spelling` | Check spelling against a comprehensive dictionary of common misspellings with su |
+| `improve_readability` | Analyze and suggest improvements for readability using Flesch-Kincaid and other  |
+| `analyze_tone` | Analyze writing tone and style: formal/informal, positive/negative, assertive/te |
 
 ## Installation
 
 ```bash
-pip install grammar-fix-ai-mcp
-# or
-npm install -g @meok-ai/grammar-fix-ai-mcp
+pip install meok-grammar-fix-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "grammar-fix-ai": {
+      "command": "python",
+      "args": ["-m", "meok_grammar_fix_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 4 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/grammar-fix-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
