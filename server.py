@@ -2,13 +2,21 @@
 """Grammar correction, spelling fixes, and writing improvement. — MEOK AI Labs."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, re
 from datetime import datetime, timezone
 from collections import defaultdict
 from mcp.server.fastmcp import FastMCP
+
+STRIPE_199 = "https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K"
+
+def _add_upgrade_tail(response, tier="free"):
+    """Append upgrade nudge to free-tier success responses."""
+    if isinstance(response, dict) and tier == "free":
+        response["_upgrade_note"] = "Pro tier: unlimited calls + priority support. Upgrade: " + STRIPE_199
+    return response
+
 
 FREE_DAILY_LIMIT = 30
 _usage = defaultdict(list)
@@ -120,7 +128,7 @@ def fix_grammar(text: str, dialect: str = "en-US", api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(): return err
 
     corrected = text
@@ -195,7 +203,7 @@ def check_spelling(text: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(): return err
 
     words = re.findall(r"\b[a-zA-Z]+\b", text)
@@ -267,7 +275,7 @@ def improve_readability(text: str, target_level: str = "general", api_key: str =
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(): return err
 
     words = text.split()
@@ -388,7 +396,7 @@ def analyze_tone(text: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(): return err
 
     words = text.lower().split()
@@ -461,5 +469,8 @@ def _tone_recommendations(formality: str, sentiment: str, confidence: str, avg_l
     return recs
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
