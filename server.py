@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Grammar correction, spelling fixes, and writing improvement. — MEOK AI Labs."""
+"""
+Grammar correction, spelling fixes, and writing improvement. — MEOK AI Labs."""
 
 import sys, os
 from auth_middleware import check_access

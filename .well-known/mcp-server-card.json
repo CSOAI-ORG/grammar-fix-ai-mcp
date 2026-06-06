@@ -1,0 +1,25 @@
+{
+  "name": "grammar-fix-ai-mcp",
+  "title": "Grammar Fix Ai Mcp",
+  "description": "Grammar Fix Ai automation via MCP. Includes check grammar, fix spelling, improve clarity. By MEOK AI Labs.",
+  "version": "1.0.7",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "fix_grammar"
+    },
+    {
+      "name": "check_spelling"
+    },
+    {
+      "name": "improve_readability"
+    },
+    {
+      "name": "analyze_tone"
+    }
+  ]
+}

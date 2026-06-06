@@ -1,0 +1,9 @@
+# grammar-fix-ai-mcp - Auto-trigger Rules
+
+When the user asks about grammar fix, use grammar-fix-ai-mcp tools: fix_grammar, check_spelling, improve_readability, analyze_tone
+
+**MCP server for grammar fix ai mcp operations**
+
+Install: `pip install grammar-fix-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
