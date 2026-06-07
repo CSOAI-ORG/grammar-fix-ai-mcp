@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "grammar-fix-ai-mcp",
+    "description": "Grammar Fix Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.7",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "grammar-fix-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "fix_grammar",
+      "check_spelling",
+      "improve_readability",
+      "analyze_tone"
+    ]
+  }
+}

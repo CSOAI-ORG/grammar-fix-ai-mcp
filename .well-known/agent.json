@@ -1,0 +1,59 @@
+{
+  "name": "grammar-fix-ai-mcp",
+  "description": "Grammar Fix Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/grammar-fix-ai-mcp.html",
+  "version": "1.0.7",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "fix_grammar",
+      "name": "Fix Grammar",
+      "description": "fix_grammar via grammar-fix-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_spelling",
+      "name": "Check Spelling",
+      "description": "check_spelling via grammar-fix-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "improve_readability",
+      "name": "Improve Readability",
+      "description": "improve_readability via grammar-fix-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "analyze_tone",
+      "name": "Analyze Tone",
+      "description": "analyze_tone via grammar-fix-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
