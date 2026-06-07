@@ -1,3 +1,4 @@
+<!-- mcp-name: CSOAI-ORG/grammar-fix-ai-mcp -->
 # Grammar Fix Ai MCP
 
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
