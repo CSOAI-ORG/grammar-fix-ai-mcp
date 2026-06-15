@@ -1,4 +1,4 @@
-<!-- mcp-name: CSOAI-ORG/grammar-fix-ai-mcp -->
+<!-- mcp-name: io.github.CSOAI-ORG/grammar-fix-ai-mcp -->
 [![MCP Scorecard: 86/100](https://img.shields.io/badge/proofof.ai-86%2F100-5b21b6)](https://proofof.ai/scorecard/grammar-fix-ai-mcp.html)
 
 # Grammar Fix Ai MCP
